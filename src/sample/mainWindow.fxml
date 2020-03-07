@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="737.0" prefWidth="530.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MainWindowController">
+   <children>
+      <TextField fx:id="prgNr" editable="false" layoutX="130.0" layoutY="14.0" />
+      <Label layoutX="14.0" layoutY="18.0" text="Program States Nr" />
+      <TableView fx:id="heapTable" layoutX="14.0" layoutY="67.0" prefHeight="200.0" prefWidth="200.0">
+        <columns>
+          <TableColumn prefWidth="98.59998321533203" text="Address" />
+          <TableColumn prefWidth="101.4000244140625" text="Value" />
+        </columns>
+      </TableView>
+      <ListView fx:id="outList" layoutX="217.0" layoutY="67.0" prefHeight="200.0" prefWidth="113.0" />
+      <ListView fx:id="fileTables" layoutX="338.0" layoutY="67.0" prefHeight="200.0" prefWidth="171.0" />
+      <ListView fx:id="programStates" layoutX="12.0" layoutY="295.0" prefHeight="153.0" prefWidth="102.0" />
+      <Label layoutX="14.0" layoutY="49.0" text="Heap Table" />
+      <Label layoutX="217.0" layoutY="49.0" text="Out" />
+      <Label layoutX="338.0" layoutY="49.0" text="FileTable" />
+      <Label layoutX="12.0" layoutY="277.0" text="PS identifiers" />
+      <TableView fx:id="symTable" layoutX="117.0" layoutY="295.0" prefHeight="200.0" prefWidth="200.0">
+        <columns>
+          <TableColumn prefWidth="105.20001220703125" text="Variable name" />
+          <TableColumn prefWidth="93.59999084472656" text="Value" />
+        </columns>
+      </TableView>
+      <Label layoutX="116.0" layoutY="277.0" text="Sym Table" />
+      <ListView fx:id="exeStack" layoutX="324.0" layoutY="295.0" prefHeight="200.0" prefWidth="200.0" />
+      <Label layoutX="324.0" layoutY="277.0" text="Exe Stack" />
+      <Button id="button" fx:id="button" layoutX="411.0" layoutY="14.0" mnemonicParsing="false" onAction="#allStep" text="Run one step" />
+      <Button layoutX="37.0" layoutY="462.0" mnemonicParsing="false" onAction="#selectPS" text="Select PS" />
+      <Label layoutX="37.0" layoutY="533.0" text="Semaphore Table:" />
+      <TableView fx:id="semTableGUI" layoutX="135.0" layoutY="513.0" prefHeight="200.0" prefWidth="288.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="C1" />
+          <TableColumn prefWidth="75.0" text="C2" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
